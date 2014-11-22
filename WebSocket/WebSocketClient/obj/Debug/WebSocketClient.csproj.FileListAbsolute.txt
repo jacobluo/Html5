@@ -1,0 +1,6 @@
+E:\SourceCode\GitHub\Html5\WebSocket\WebSocketClient\bin\WebSocketClient.dll.config
+E:\SourceCode\GitHub\Html5\WebSocket\WebSocketClient\bin\WebSocketClient.dll
+E:\SourceCode\GitHub\Html5\WebSocket\WebSocketClient\bin\WebSocketClient.pdb
+E:\SourceCode\GitHub\Html5\WebSocket\WebSocketClient\obj\Debug\WebSocketClient.csprojResolveAssemblyReference.cache
+E:\SourceCode\GitHub\Html5\WebSocket\WebSocketClient\obj\Debug\WebSocketClient.dll
+E:\SourceCode\GitHub\Html5\WebSocket\WebSocketClient\obj\Debug\WebSocketClient.pdb

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>html5 web socket chat room</title>
+		<script language="javascript" src="Js/jquery-2.1.1.min.js"></script>
+		<script language="javascript" type="text/javascript">
+			
+			var chatServer = null;
+			var isConnected = false;
+
+			function openWebSocket(){
+				websocket = new WebSocket(wsUri);
+						websocket.onopen = 	function(evt) { onOpen(evt) };
+				websocket.onclose = function(evt) { onClose(evt) };
+				websocket.onmessage = function(evt) { onMessage(evt) };
+				websocket.onerror = function(evt) { onError(evt) };
+			}
+
+			function TestSupportWebSocket(){
+				try {
+					var dummy = new WebSocket("ws://echo.websocket.org/");
+					return true;
+				} catch (ex) {
+					return false;
+				}
+			}
+
+			function ConnectToServer(url, onopen, onmessage, onclose, onerror){
+
+				log("ready connect to server: " + url);  
+
+                chatServer = new WebSocket(url);
+				chatServer.onopen = onopen;
+				chatServer.onclose = onclose;
+                chatServer.onmessage = onmessage;	     
+                chatServer.onerror = onerror;
+			}
+
+			function onOpen(evt){
+				log("socket opened.");  
+				isConnected = true;
+
+				login();
+			}
+
+			function login(){
+				doSend("login: user")
+			}
+
+			function onMessage(evt){
+				log("message received: " + evt.data);  
+			}
+
+			function onClose(evt){
+				log("socket closed.");  
+			}
+			
+			function onError(evt){
+				log("socket error.");  
+			}
+
+			function log(data){
+				console.log(data);
+			}
+
+			function doSend(message){ 
+				log("send data: " + message);  
+				chatServer.send(message); 
+			} 
+
+			$(document).ready(function () {
+
+				var url = "ws://192.168.2.103:4141/chat";
+
+				ConnectToServer(url, onOpen, onMessage, onClose, onError);
+			});
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

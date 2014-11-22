@@ -1,0 +1,5 @@
+E:\SourceCode\GitHub\Html5\WebSocket\WebSocketServer\bin\Debug\WebSocketServer.exe.config
+E:\SourceCode\GitHub\Html5\WebSocket\WebSocketServer\bin\Debug\WebSocketServer.exe
+E:\SourceCode\GitHub\Html5\WebSocket\WebSocketServer\bin\Debug\WebSocketServer.pdb
+E:\SourceCode\GitHub\Html5\WebSocket\WebSocketServer\obj\Debug\WebSocketServer.exe
+E:\SourceCode\GitHub\Html5\WebSocket\WebSocketServer\obj\Debug\WebSocketServer.pdb
